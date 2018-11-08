@@ -1,20 +1,7 @@
-const superagent = require('superagent');
 var Discord = require('discord.js');
 const client = new Discord.Client(); 
 var prefix = ("/")
 
-exports.run = async (client, message, args, tools) => {
-    let color = ''
-      const { body } = await superagent
-    .get('https://yesno.wtf/api/');
-    if(body.answer === 'yes') color = '0x01DF01';
-    if(body.answer === 'no') color = '0xFF0000';
-    const embed = new Discord.RichEmbed()
-    .setColor(color)
-    .setImage(`${body.image}`)
-    message.channel.send(`The magic API says: **${body.answer}**`, {embed});
-
-});
 
 
 client.on('ready', () => {
@@ -195,6 +182,32 @@ client.on('message', message => {
 
     }
 });
+
+module.exports.run = async (bot, message, args) => {
+
+  let online = message.guild.members.filter(member => member.user.presence.status !== 'offline');
+  let day = message.guild.createdAt.getDate()
+  let month = 1 + message.guild.createdAt.getMonth()
+  let year = message.guild.createdAt.getFullYear()
+   let sicon = message.guild.iconURL;
+   let serverembed = new Discord.RichEmbed()
+   .setAuthor(message.guild.name, sicon)
+   .setFooter(`Server Created • ${day}.${month}.${year}`)
+   .setColor("#7289DA")
+   .setThumbnail(sicon)
+   .addField("ID", message.guild.id, true)
+   .addField("Name", message.guild.name, true)
+   .addField("Owner", message.guild.owner.user.tag, true)
+   .addField("Region", message.guild.region, true)
+   .addField("Channels", message.guild.channels.size, true)
+   .addField("Members", message.guild.memberCount, true)
+   .addField("Humans", message.guild.memberCount - message.guild.members.filter(m => m.user.bot).size, true)
+   .addField("Bots", message.guild.members.filter(m => m.user.bot).size, true)
+   .addField("Online", online.size, true)
+   .addField("Roles", message.guild.roles.size, true);
+   message.channel.send(serverembed);
+
+}));
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
