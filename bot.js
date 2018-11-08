@@ -19,26 +19,18 @@ guild.defaultChannel.sendMessage('c h e j **${guild.name}**')
 
 //messages 
 client.on("message", msg => {
-	if(msg.content.startsWith(prefix + "emil")) { 
+        if (msg.content.startsWith('/emil')) {
 		msg.channel.sendMessage("to ziom")
 	}
  else 
-	if(msg.content.startsWith(prefix + "who")) { 
+        if (msg.content.startsWith('/kto')) {
         msg.channel.sendMessage("immune is the author!")			
         }
-	else 
-		if(msg.content.startsWith(prefix + "reddit")) {
-			msg.channel.sendMessage("https://www.reddit.com/r/random/")
-		}
-		else
-			if(msg.content.startsWith(prefix + "meme")) {
-				msg.channel.sendMessage("https://www.imgur.com/random")
-			}
-        else 
-
-	    if(msg.content.includes(prefix + "help")) {
+	else
+		
+            if (msg.content.startsWith('/pomoc')) {    
 		if(msg.author.bot) return;
-		msg.channel.sendMessage("-")
+		msg.channel.sendMessage("no kurla potem uzupelnie gupku")
 }
 else 
   if(msg.content.startsWith("")) {
