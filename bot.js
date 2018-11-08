@@ -4,18 +4,18 @@ var prefix = ("/")
 
 
 client.on('ready', () => {
-	console.log('I am ready!')
+  console.log('I am ready!');
 });
 
-client.on("guildMemberAdd", member => { 
-let guild = member.guild; 
-guild.defaultChannel.sendMessage('c h e j   p r z y j a c i e l u  ! ${member.user}')
+// Create an event listener for new guild members
+client.on('guildMemberAdd', member => {
+  // Send the message to a designated channel on a server:
+  const channel = member.guild.channels.find(ch => ch.name === 'emiltoemiltobot');
+  // Do nothing if the channel wasn't found on this server
+  if (!channel) return;
+  channel.send(`witaj na emiltoserwerze, ${member}!`);
 });
 
-client.on("guildCreate", guild => {
-	console.log('New guild added :: ${guild.name}, owned by ${guild.owner.user.username}')
-guild.defaultChannel.sendMessage('c h e j **${guild.name}**')
-});
 
 //messages 
 client.on("message", msg => {
