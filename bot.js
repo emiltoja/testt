@@ -19,8 +19,8 @@ guild.defaultChannel.sendMessage('c h e j **${guild.name}**')
 
 //messages 
 client.on("message", msg => {
-	if(msg.content.startsWith(prefix + "smoke")) { 
-		msg.channel.sendMessage("Weed!")
+	if(msg.content.startsWith(prefix + "emil")) { 
+		msg.channel.sendMessage("to ziom")
 	}
  else 
 	if(msg.content.startsWith(prefix + "who")) { 
