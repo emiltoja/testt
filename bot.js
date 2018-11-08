@@ -125,8 +125,6 @@ client.on('message', message => {
 client.on('message', message => {
   if (message.content === 'idiota') {
     message.channel.send('twuj stary pijany');
-  color: 3447003,
-  description: "test"
   }
 });
 
