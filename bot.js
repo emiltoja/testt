@@ -4,7 +4,7 @@ var prefix = ("/")
 
 
 client.on('ready', () => {
-	console.log('c h e j')
+	console.log('I am ready!')
 });
 
 client.on("guildMemberAdd", member => { 
