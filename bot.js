@@ -128,6 +128,23 @@ client.on('message', message => {
   }
 });
 
+client.on('ready', () => {
+  console.log('I am ready!');
+});
+
+client.on('message', message => {
+  if (!message.guild) return;
+	
+  if (message.content.startsWith('/czysc')) {
+        let messagecount = parseInt(args[1]) || 1;
+
+        var deletedMessages = -1;
+
+        message.channel.fetchMessages({limit: Math.min(messagecount + 1, 100)}).then(messages => {
+            messages.forEach(m => {
+                if (m.author.id == bot.user.id) {
+                    m.delete().catch(console.error);
+                    deletedMessages++;
 
 
  
