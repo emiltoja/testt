@@ -1,5 +1,4 @@
 var Discord = require('discord.js');
-const CLEAR_MESSAGES = '!clearMessages';
 const client = new Discord.Client(); 
 var prefix = ("/")
 
@@ -129,7 +128,7 @@ client.on('message', message => {
   }
 });
 
-bot.on('message', message => {
+client.on('message', message => {
 
     // Variables - Variables make it easy to call things, since it requires less typing.
     let msg = message.content.toUpperCase(); // This variable takes the message, and turns it all into uppercase so it isn't case sensitive.
