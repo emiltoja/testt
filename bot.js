@@ -127,6 +127,12 @@ client.on('message', message => {
     message.channel.send('twuj stary pijany');
   }
 });
+client.on('message', message => {
+  if (message.content === 'test') {
+message.channel.send({embed: {
+  color: 3447003,
+  description: "test"
+});
 
 client.on('message', message => {
 
