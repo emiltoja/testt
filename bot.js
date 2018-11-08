@@ -1,6 +1,20 @@
+const superagent = require('superagent');
 var Discord = require('discord.js');
 const client = new Discord.Client(); 
 var prefix = ("/")
+
+exports.run = async (client, message, args, tools) => {
+    let color = ''
+      const { body } = await superagent
+    .get('https://yesno.wtf/api/');
+    if(body.answer === 'yes') color = '0x01DF01';
+    if(body.answer === 'no') color = '0xFF0000';
+    const embed = new Discord.RichEmbed()
+    .setColor(color)
+    .setImage(`${body.image}`)
+    message.channel.send(`The magic API says: **${body.answer}**`, {embed});
+
+});
 
 
 client.on('ready', () => {
@@ -16,26 +30,6 @@ client.on('guildMemberAdd', member => {
   channel.send(`witaj na emiltoserwerze, ${member}!`);
 });
 
-client.on("ready", () => {
-  // This event will run if the bot starts, and logs in, successfully.
-  console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
-  // Example of changing the bot's playing game to something useful. `client.user` is what the
-  // docs refer to as the "ClientUser".
-  client.user.setActivity(`Serving ${client.guilds.size} servers | -help`);
-});
-
-client.on("guildCreate", guild => {
-  //  when the bot joins a guild.
-  console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-  client.user.setActivity(`Serving ${client.guilds.size} servers | -help`);
-});
-
-client.on("guildDelete", guild => {
-  // when the bot is removed from a guild.
-  console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
-  client.user.setActivity(`Serving ${client.guilds.size} servers | -help`);
-
-});
 
 //messages 
 client.on("message", msg => {
