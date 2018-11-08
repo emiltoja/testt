@@ -90,7 +90,7 @@ client.on('message', message => {
   }
 });
 
-if(command === "czysc") {
+  if (message.content.startsWith('/ban')) {
 
     const deleteCount = parseInt(args[0], 10);
     
@@ -111,7 +111,7 @@ client.on('message', message => {
   if (message.content === 'awatar') {
     message.reply(message.author.avatarURL);
   }
-})
+});
 client.on('ready', () => {
   console.log('I am ready!');
 });
