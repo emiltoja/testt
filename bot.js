@@ -145,8 +145,8 @@ client.on('message', message => {
                 if (m.author.id == bot.user.id) {
                     m.delete().catch(console.error);
                     deletedMessages++;
-
-
+  }
+});
  
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
