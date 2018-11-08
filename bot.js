@@ -128,24 +128,44 @@ client.on('message', message => {
   }
 });
 
-client.on('ready', () => {
-  console.log('I am ready!');
-});
+bot.on('ready', () => {
+  console.log('ClearMessagesBot is Ready!');
+  bot.on('message', message => {
+    if (message.content == CLEAR_MESSAGES) {
 
-client.on('message', message => {
-  if (!message.guild) return;
-	
-  if (message.content.startsWith('/czysc')) {
-        let messagecount = parseInt(args[1]) || 1;
+      // Check the following permissions before deleting messages:
+      //    1. Check if the user has enough permissions
+      //    2. Check if I have the permission to execute the command
 
-        var deletedMessages = -1;
+      if (!message.channel.permissionsFor(message.author).hasPermission("MANAGE_MESSAGES")) {
+        message.channel.sendMessage("niestety, nie masz uprawnien do wykonania polecenia \""+message.content+"\"");
+        console.log("niestety, nie masz uprawnien do wykonania polecenia \""+message.content+"\"");
+        return;
+      } else if (!message.channel.permissionsFor(bot.user).hasPermission("MANAGE_MESSAGES")) {
+        message.channel.sendMessage("niestety, nie masz uprawnien do wykonania polecenia \""+message.content+"\"");
+        console.log("niestety, nie masz uprawnien do wykonania polecenia \""+message.content+"\"");
+        return;
+      }
 
-        message.channel.fetchMessages({limit: Math.min(messagecount + 1, 100)}).then(messages => {
-            messages.forEach(m => {
-                if (m.author.id == bot.user.id) {
-                    m.delete().catch(console.error);
-                    deletedMessages++;
-  }
+      // Only delete messages if the channel type is TextChannel
+      // DO NOT delete messages in DM Channel or Group DM Channel
+      if (message.channel.type == 'text') {
+        message.channel.fetchMessages()
+          .then(messages => {
+            message.channel.bulkDelete(messages);
+            messagesDeleted = messages.array().length; // number of messages deleted
+
+            // Logging the number of messages deleted on both the channel and console.
+            message.channel.sendMessage("usuwanie wiadomosci zakonczone powodzeniem. calkowita liczba usunietych wiadomosci: "+messagesDeleted);
+            console.log('usuwanie wiadomosci zakonczone powodzeniem. calkowita liczba usunietych wiadomosci: '+messagesDeleted)
+          })
+          .catch(err => {
+            console.log('blad podczas usuwania wiadomosci!!!!');
+            console.log(err);
+          });
+      }
+    }
+  });
 });
  
 // THIS  MUST  BE  THIS  WAY
