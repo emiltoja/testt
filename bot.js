@@ -5,7 +5,6 @@ var prefix = ("/")
 
 client.on('ready', () => {
   console.log('I am ready!');
-  client.user.setGame('emiltogra');
 });
 
 // Create an event listener for new guild members
@@ -15,6 +14,8 @@ client.on('guildMemberAdd', member => {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   channel.send(`witaj na emiltoserwerze, ${member}!`);
+});
+client.user.setGame ("tutaj gra!")
 });
 
 //messages 
