@@ -171,7 +171,7 @@ client.on('message', message => {
                 .catch(error => message.channel.send(`Error: ${error}`))
 
         }
-        czysc();
+        purge();
 
     }
 });
