@@ -155,20 +155,20 @@ client.on('message', message => {
 
             // Now, we want to check if the user has the `bot-commander` role, you can change this to whatever you want.
             if (!message.member.roles.find("name", "emiltomoderator")) { // This checks to see if they DONT have it, the "!" inverts the true/false
-                message.channel.send('You need the \`emiltomoderator\` role to use this command.'); // This tells the user in chat that they need the role.
+                message.channel.send('musisz posiadac role \`emiltomoderator\` aby uzyc tej komendy'); // This tells the user in chat that they need the role.
                 return; // this returns the code, so the rest doesn't run.
             }
 
             // We want to check if the argument is a number
             if (isNaN(args[0])) {
                 // Sends a message to the channel.
-                message.channel.send('podaj ilosc wiadomosci do usuniecia! \n uzyj: ' + prefix + 'czysc <ilosc>'); //\n means new line.
+                message.channel.send('podaj ilosc wiadomosci do usuniecia! \n ``` ' + prefix + 'purge <ilosc>```'); //\n means new line.
                 // Cancels out of the script, so the rest doesn't run.
                 return;
             }
 
             const fetched = await message.channel.fetchMessages({limit: args[0]}); // This grabs the last number(args) of messages in the channel.
-            console.log(fetched.size + ' messages found, deleting...'); // Lets post into console how many messages we are deleting
+            console.log(fetched.size + ' usuwanie wiadomosci...'); // Lets post into console how many messages we are deleting
 
             // Deleting the messages
             message.channel.bulkDelete(fetched)
