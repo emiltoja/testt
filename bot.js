@@ -74,7 +74,7 @@ client.on('message', message => {
       const member = message.guild.member(user);
       if (member) {
         member.ban({
-          reason: 'They were bad!',
+          reason: 'byles niegrzeczny kotq!',
         }).then(() => {
           message.reply(`uzytkownik ${user.tag} dostal bana`);
         }).catch(err => {
