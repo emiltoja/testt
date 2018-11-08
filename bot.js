@@ -17,7 +17,7 @@ client.on('guildMemberAdd', member => {
 });
 
 client.on('ready', () => {
-  client.user.setGame('emiltogra')
+  client.user.setGame('emiltogra');
 });
 
 //messages 
