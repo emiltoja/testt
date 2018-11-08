@@ -90,6 +90,9 @@ client.on('message', message => {
   }
 });
 
+client.on('ready', () => {
+  console.log('I am ready!');
+});
   if (message.content.startsWith('/ban')) {
 
     const deleteCount = parseInt(args[0], 10);
