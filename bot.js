@@ -93,22 +93,6 @@ client.on('message', message => {
 client.on('ready', () => {
   console.log('I am ready!');
 });
-  if (message.content.startsWith('/ban')) {
-
-    const deleteCount = parseInt(args[0], 10);
-    
-    if(!deleteCount || deleteCount < 2 || deleteCount > 100)
-      return message.reply("podaj liczbe od 2 do 100 dla liczby wiadomosci do usuniecia");
-    
-    const fetched = await message.channel.fetchMessages({limit: deleteCount});
-    message.channel.bulkDelete(fetched)
-      .catch(error => message.reply(`nie mozna usunac wiadomosci z powodu: ${error}`));
-  }
-});
-
-client.on('ready', () => {
-  console.log('I am ready!');
-});
 
 client.on('message', message => {
   if (message.content === 'awatar') {
