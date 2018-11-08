@@ -15,6 +15,8 @@ client.on('guildMemberAdd', member => {
   if (!channel) return;
   channel.send(`witaj na emiltoserwerze, ${member}!`);
 });
+
+client.on ("ready", () => {
 client.user.setGame ("tutaj gra!");
 });
 
