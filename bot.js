@@ -128,45 +128,38 @@ client.on('message', message => {
     message.channel.send('twuj stary pijany');
   }
 });
+  if (message.startsWith('/czysc')) {
+        // We have to wrap this in an async since awaits only work in them.
+        async function purge() {
+            message.delete(); // Let's delete the command message, so it doesn't interfere with the messages we are going to delete.
 
-client.on('ready', () => {
-  console.log('ClearMessagesBot is Ready!');
-  client.on('message', message => {
-    if (message.content == CLEAR_MESSAGES) {
+            // Now, we want to check if the user has the `bot-commander` role, you can change this to whatever you want.
+            if (!message.member.roles.find("name", "bot-commander")) { // This checks to see if they DONT have it, the "!" inverts the true/false
+                message.channel.send('potrzebujesz \`bot-commander\` roli do uzycia tej komendy.'); // This tells the user in chat that they need the role.
+                return; // this returns the code, so the rest doesn't run.
+            }
 
-      // Check the following permissions before deleting messages:
-      //    1. Check if the user has enough permissions
-      //    2. Check if I have the permission to execute the command
+            // We want to check if the argument is a number
+            if (isNaN(args[0])) {
+                // Sends a message to the channel.
+                message.channel.send('podaj ilosc wiadomosci do usuniecia. \n uzyj: ' + prefix + 'czysc <ilosc>'); //\n means new line.
+                // Cancels out of the script, so the rest doesn't run.
+                return;
+            }
 
-      if (!message.channel.permissionsFor(message.author).hasPermission("MANAGE_MESSAGES")) {
-        message.channel.sendMessage("niestety, nie masz uprawnien do wykonania polecenia \""+message.content+"\"");
-        console.log("niestety, nie masz uprawnien do wykonania polecenia \""+message.content+"\"");
-        return;
-      } else if (!message.channel.permissionsFor(bot.user).hasPermission("MANAGE_MESSAGES")) {
-        message.channel.sendMessage("niestety, nie masz uprawnien do wykonania polecenia \""+message.content+"\"");
-        console.log("niestety, nie masz uprawnien do wykonania polecenia \""+message.content+"\"");
-        return;
-      }
+            const fetched = await message.channel.fetchMessages({limit: args[0]}); // This grabs the last number(args) of messages in the channel.
+            console.log(fetched.size + ' wiadomosci znalezione, usuwanie . . .'); // Lets post into console how many messages we are deleting
 
-      // Only delete messages if the channel type is TextChannel
-      // DO NOT delete messages in DM Channel or Group DM Channel
-      if (message.channel.type == 'text') {
-        message.channel.fetchMessages()
-          .then(messages => {
-            message.channel.bulkDelete(messages);
-            messagesDeleted = messages.array().length; // number of messages deleted
+            // Deleting the messages
+            message.channel.bulkDelete(fetched)
+                .catch(error => message.channel.send(`Error: ${error}`)); // If it finds an error, it posts it into the channel.
 
-            // Logging the number of messages deleted on both the channel and console.
-            message.channel.sendMessage("usuwanie wiadomosci zakonczone powodzeniem. calkowita liczba usunietych wiadomosci: "+messagesDeleted);
-            console.log('usuwanie wiadomosci zakonczone powodzeniem. calkowita liczba usunietych wiadomosci: '+messagesDeleted)
-          })
-          .catch(err => {
-            console.log('blad podczas usuwania wiadomosci!!!!');
-            console.log(err);
-          });
-      }
+        }
+
+        // We want to make sure we call the function whenever the purge command is run.
+        purge(); // Make sure this is inside the if(msg.startsWith)
+
     }
-  });
 });
  
 // THIS  MUST  BE  THIS  WAY
