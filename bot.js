@@ -131,6 +131,19 @@ client.on('message', message => {
       message.reply('nieprawidlowy nick lub nie oznaczono za pomoca @ uzytkownika');
     }
   }
+});
+
+client.on('ready', () => {
+  console.log('I am ready!');
+});
+
+// Create an event listener for messages
+client.on('message', message => {
+  // If the message is "what is my avatar"
+  if (message.content === 'awatar') {
+    // Send the user's avatar URL
+    message.reply(message.author.avatarURL);
+  }
 })
 
 
