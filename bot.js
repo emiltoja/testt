@@ -235,7 +235,7 @@ client.on('ready', () => {
     client.user.setStatus('available') // Can be 'available', 'idle', 'dnd', or 'invisible'
     client.user.setPresence({
         game: {
-            name: 'emiltogrze',
+            name: 'szmusi jest najlepsza na swiecie',
             type: 0
         }
     });
@@ -282,10 +282,10 @@ client.on("message", (message) => {
     },
     title: "",
     url: "",
-    description: "szmusi to... \n najnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajlepsza dziewczyna jaka znam!!!!! :heart::heart::heart::heart::heart::heart::heart:",
+    description: "",
     fields: [{
-        name: "c h e j",
-        value: "jesli myslisz ze jest inaczej, to zle myslisz gupku"
+        name: "szmusi",
+        value: "najnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajlepsza dziewczyna jaka znam!!!!! :heart::heart::heart::heart::heart::heart::heart: \njesli myslisz ze jest inaczej, to zle myslisz gupku"
       },
     ],
     timestamp: new Date(),
