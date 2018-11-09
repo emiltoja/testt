@@ -188,9 +188,7 @@ client.on("message", (message) => {
       icon_url: client.user.avatarURL
     },
         name: "szmusi",
-        value: "test"
-      },
-      {
+        value: "They can have different fields with small headlines."
     ],
     timestamp: new Date(),
     footer: {
