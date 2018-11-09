@@ -133,10 +133,32 @@ client.on('message', message => {
     // Commands
 
     // Ping
-    if (msg === prefix + 'PING') { // This checks if msg (the message but in all caps), is the same as the prefix + the command in all caps.
-
-        // Now, let's send a response.
-        message.channel.send('Ping!'); // This 'sends' the message to the channel the message was in. You can change what is in the message to whatever you want.
+	  if (message.author.equals(client.user)) return;
+	  
+	  if (!message.content.startWith(prefix)) return;
+	  
+	  var args - message.content.substring(prefix.length).split(" ");
+	  
+	  switch (args[0]. toLowerCase()) {
+		  case "ping":
+			 message.channel.sendMessage("Pong!");
+			 break
+		  case "info":
+		     message.channel.sendMessage("to bot emiltoja");
+			 break;
+		  case "testt":
+		     if (args[1]) message.channe.sendMessage(fortunes[Math.floor(Math.random() * fortunes.length)]);
+			 else message.channel.sendMessage("testuje");
+			 break;
+		  case "embed":
+		    var embed = new Discord.RichEnbed()
+				.addField("test title", "test costam", true)
+				.setColor(0x00FFFFFF)
+			 message.channel.sendEnbed(enbed);
+			 break;
+		  default:
+			 message.channel.sendMessage("Invilad command");
+	  }
 
     }
 
@@ -187,57 +209,6 @@ client.on('ready', () => {
     });
 });
 
-client.on("message", message => {
-
-    if (message.content === prefix + "ssss") {
-        const embed = {
-  "title": "title ~~(did you know you can have markdown here too?)~~",
-  "description": "this supports [named links](https://discordapp.com) on top of the previously shown subset of markdown. ```\nyes, even code blocks```",
-  "url": "https://discordapp.com",
-  "color": 16665999,
-  "timestamp": "2018-11-09T12:37:16.068Z",
-  "footer": {
-    "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
-    "text": "footer text"
-  },
-  "thumbnail": {
-    "url": "https://cdn.discordapp.com/embed/avatars/0.png"
-  },
-  "image": {
-    "url": "https://cdn.discordapp.com/embed/avatars/0.png"
-  },
-  "author": {
-    "name": "author name",
-    "url": "https://discordapp.com",
-    "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
-  },
-  "fields": [
-    {
-      "name": "🤔",
-      "value": "some of these properties have certain limits..."
-    },
-    {
-      "name": "😱",
-      "value": "try exceeding some of them!"
-    },
-    {
-      "name": "🙄",
-      "value": "an informative error should show up, and this view will remain as-is until all issues are fixed"
-    },
-    {
-      "name": "<:thonkang:219069250692841473>",
-      "value": "these last two",
-      "inline": true
-    },
-    {
-      "name": "<:thonkang:219069250692841473>",
-      "value": "are inline fields",
-      "inline": true
-    }
-  ]
-};
-channel.send("this `supports` __a__ **subset** *of* ~~markdown~~ 😃 ```js\nfunction foo(bar) {\n  console.log(bar);\n}\n\nfoo(1);```", { embed 
-});
 
 
 // THIS  MUST  BE  THIS  WAY
