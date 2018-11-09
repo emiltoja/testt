@@ -1,5 +1,4 @@
 var Discord = require('discord.js');
-const commando = require('discord.js-commando');
 const client = new Discord.Client();
 var prefix = ("/")
 
