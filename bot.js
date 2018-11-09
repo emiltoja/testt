@@ -191,22 +191,14 @@ client.on("message", (message) => {
     url: "http://google.com",
     description: "This is a test embed to showcase what they look like and what they can do.",
     fields: [{
-        name: "",
-        value: ""
+        name: "Fields",
+        value: "They can have different fields with small headlines."
       },
-      {
-        name: "",
-        value: ""
-      },
-      {
-        name: "",
-        value: ""
-      }
     ],
     timestamp: new Date(),
     footer: {
       icon_url: client.user.avatarURL,
-      text: "© bot by emiltoja"
+      text: "© Example"
     }
   }
 });
