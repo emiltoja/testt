@@ -1,5 +1,6 @@
 var Discord = require('discord.js');
 const client = new Discord.Client();
+const { Client, Attachment } = require('discord.js');
 const prefix = ("/")
 
 client.on('ready', () => {
@@ -123,7 +124,8 @@ client.on('message', message => {
 });
 client.on('message', message => {
     if (message.content === 'rip') {
-    message.channel.send('https://i.imgur.com/w3duR07.png');
+        const attachment = new Attachment('https://i.imgur.com/w3duR07.png');
+        message.channel.send(attachment);
     }
 });
 
