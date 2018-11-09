@@ -1,11 +1,9 @@
 var Discord = require('discord.js');
 const commando = require('discord.js-commando');
-const client = new Discord.Client(); 
+const client = new Discord.Client();
 var prefix = ("/")
 
-client.on("ready", () => {
-  console.log('Im am ready!');
-  client.user.setGame("Type !help");
+client.user.setActivity('YouTube', { type: 'WATCHING' 
 });
 
 client.on('ready', () => {
