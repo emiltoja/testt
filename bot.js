@@ -252,12 +252,40 @@ client.on("message", (message) => {
       name: client.user.username,
       icon_url: client.user.avatarURL
     },
-    title: "wooops!",
-    url: "http://google.com",
+    title: "",
+    url: "",
     description: "podaj ilosc wiadomosci do usuniecia! \n ``` ' + prefix + 'purge <ilosc>```",
     fields: [{
         name: "Fields",
         value: "They can have different fields with small headlines."
+      },
+    ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "© bot by emiltoja"
+    }
+  }
+});
+  }
+});
+client.on("message", (message) => {
+  // Exit and stop if it's not there
+  if (!message.content.startsWith(prefix)) return;
+ 
+  if (message.content.startsWith(prefix + "szmusi")) {
+	message.channel.send({embed: {
+    color: 990066,
+    author: {
+      name: client.user.username,
+      icon_url: client.user.avatarURL
+    },
+    title: "",
+    url: "",
+    description: "szmusi to... \n najnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajlepsza dziewczyna jaka znam!!!!! :heart::heart::heart::heart::heart::heart::heart:",
+    fields: [{
+        name: "c h e j",
+        value: "jesli myslisz ze jest inaczej, to zle myslisz gupku"
       },
     ],
     timestamp: new Date(),
