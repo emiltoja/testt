@@ -187,10 +187,6 @@ client.on("message", (message) => {
       name: client.user.username,
       icon_url: client.user.avatarURL
     },
-    title: "This is an embed",
-    url: "http://google.com",
-    description: "This is a test embed to showcase what they look like and what they can do.",
-    fields: [{
         name: "Fields",
         value: "They can have different fields with small headlines."
       },
