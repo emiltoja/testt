@@ -191,6 +191,17 @@ client.on("message", (message) => {
     url: "http://google.com",
     description: "This is a test embed to showcase what they look like and what they can do.",
     fields: [{
+        name: "",
+        value: ""
+      },
+      {
+        name: "",
+        value: ""
+      },
+      {
+        name: "",
+        value: ""
+      }
     ],
     timestamp: new Date(),
     footer: {
