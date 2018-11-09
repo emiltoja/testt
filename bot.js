@@ -1,4 +1,4 @@
-const { Client, RichEmbed } = require('discord.js');
+var { Client, RichEmbed } = require('discord.js');
 const client = new Discord.Client();
 const prefix = ("/")
 
