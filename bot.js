@@ -118,8 +118,73 @@ client.on('message', message => {
   }
 });
 client.on('message', message => {
-  if (message.content === 'fiut') {
+  if (message.content === 'kc') {
+    message.channel.send('tkc "heart:');
+  }
+});
+client.on('message', message => {
+  if (message.content === 'co tam') {
+    message.channel.send('dobrze, a tam?');
+  }
+});
+client.on('message', message => {
+  if (message.content === 'twuj stary') {
     message.channel.send('twuj stary pijany');
+  }
+});
+client.on('message', message => {
+  if (message.content === 'kretyn') {
+    message.channel.send('twuj stary pijany');
+  }
+});
+client.on('message', message => {
+  if (message.content === 'idiota') {
+    message.channel.send('twuj stary pijany');
+  }
+});
+client.on('message', message => {
+  if (message.content === 'pajac') {
+    message.channel.send('twuj stary pijany');
+  }
+});
+client.on('message', message => {
+  if (message.content === 'debil jebany') {
+    message.channel.send('twuj stary pijany');
+  }
+});
+client.on('message', message => {
+  if (message.content === 'debil') {
+    message.channel.send('twuj stary pijany');
+  }
+});
+client.on('message', message => {
+  if (message.content === 'chuj') {
+    message.channel.send('twuj stary pijany');
+  }
+});
+client.on('message', message => {
+  if (message.content === 'pizda') {
+    message.channel.send('twuj stary pijany');
+  }
+});
+client.on('message', message => {
+  if (message.content === 'elo') {
+    message.channel.send('```c h e j   m i s i u```');
+  }
+});
+client.on('message', message => {
+  if (message.content === 'marcin') {
+    message.channel.send('huj jebany!');
+  }
+});
+client.on('message', message => {
+  if (message.content === 'szmusitoja') {
+    message.channel.send(':heart: szmusi :heart:');
+  }
+});
+client.on('message', message => {
+  if (message.content === 'emiltoja') {
+    message.channel.send(':heart: emilek :heart:');
   }
 });
 
@@ -175,16 +240,6 @@ client.on('ready', () => {
             type: 0
         }
     });
-});
-
-client.on('message', message => {
-    // If the message is 'rip'
-    if (message.content === 'rip') {
-        // Create the attachment using Attachment
-        const attachment = new Attachment('https://i.imgur.com/w3duR07.png');
-        // Send the attachment in the message channel
-        message.channel.send(attachment);
-    }
 });
 
 // THIS  MUST  BE  THIS  WAY
