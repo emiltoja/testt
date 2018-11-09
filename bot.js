@@ -123,7 +123,7 @@ client.on('message', message => {
 });
 client.on('message', message => {
   if (message.content === 'szmusi') {
-    message.channel.send({embed: {
+    message.channel.send('szmusi? :heart: :heart: :heart:');
     color: 3447003,
     author: {
       name: client.user.username,
