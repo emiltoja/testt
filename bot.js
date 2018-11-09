@@ -187,9 +187,7 @@ client.on("message", (message) => {
       name: client.user.username,
       icon_url: client.user.avatarURL
     },
-    title: "wooops!",
-    url: "http://google.com",
-    description: "podaj ilosc wiadomosci do usuniecia! \n ``` ' + prefix + 'purge <ilosc>```",
+    description: "WOOOPS!! \npodaj ilosc wiadomosci do usuniecia! \n ``` /purge <ilosc>```",
     fields: [{
         name: "Fields",
         value: "They can have different fields with small headlines."
