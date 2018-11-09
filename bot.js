@@ -181,27 +181,15 @@ client.on("message", (message) => {
   if (!message.content.startsWith(prefix)) return;
  
   if (message.content.startsWith(prefix + "ping")) {
-	message.channel.send({embed: {
-    color: FF0000,
-    author: {
-      name: client.user.username,
-      icon_url: client.user.avatarURL
-    },
-    description: "WOOOPS!! \npodaj ilosc wiadomosci do usuniecia! \n ``` /purge <ilosc>```",
-    fields: [{
-        name: "UWAGA",
-        value: "ilosc czyszczonego czatu moze wynoscic maksymalnie 100!!"
-      },
-    ],
-    timestamp: new Date(),
-    footer: {
-      icon_url: client.user.avatarURL,
-      text: "© bot by emiltoja"
-    }
+   message.channel.send({embed: {
+	color: 3447003,
+	description: "A very simple Embed!"
+   }
+   }
   }
 });
-  }
-});
+
+
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
