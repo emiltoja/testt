@@ -145,8 +145,27 @@ client.on('message', message => {
             // We want to check if the argument is a number
             if (isNaN(args[0])) {
                 // Sends a message to the channel.
-                message.channel.send('podaj ilosc wiadomosci do usuniecia! \n ``` ' + prefix + 'purge <ilosc>```'); //\n means new line.
-                // Cancels out of the script, so the rest doesn't run.
+	message.channel.send({embed: {
+    color: FF0000,
+    author: {
+      name: client.user.username,
+      icon_url: client.user.avatarURL
+    },
+    description: "WOOOPS!! \npodaj ilosc wiadomosci do usuniecia! \n ``` /purge <ilosc>```",
+    fields: [{
+        name: "UWAGA",
+        value: "ilosc czyszczonego czatu moze wynoscic maksymalnie 100!!"
+      },
+    ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "© bot by emiltoja"
+    }
+  }
+});
+  }
+});
                 return;
             }
 
@@ -189,7 +208,8 @@ client.on("message", (message) => {
     },
     description: "WOOOPS!! \npodaj ilosc wiadomosci do usuniecia! \n ``` /purge <ilosc>```",
     fields: [{
-
+        name: "UWAGA",
+        value: "ilosc czyszczonego czatu moze wynoscic maksymalnie 100!!"
       },
     ],
     timestamp: new Date(),
