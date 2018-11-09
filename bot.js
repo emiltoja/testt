@@ -160,7 +160,7 @@ client.on('message', message => {
 			 message.channel.sendMessage("Invilad command");
 	  }
 
-    }
+    
 
 
     // Purge
