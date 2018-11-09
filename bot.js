@@ -176,7 +176,12 @@ client.on('ready', () => {
     });
 });
 
-client.on('message', message => {
+client.on("ready", function() {
+	console.log("Ready");
+	
+});
+
+clinet.on("message", function(message) {
 	  if (message.author.equals(client.user)) return;
 	  
 	  if (!message.content.startWith(prefix)) return;
