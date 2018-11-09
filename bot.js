@@ -1,6 +1,6 @@
 var Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = ("/")
+const prefix = ("/")
 
 client.on('ready', () => {
   console.log('I am ready!');
@@ -174,6 +174,16 @@ client.on('ready', () => {
             type: 0
         }
     });
+});
+
+client.on("message", (message) => {
+  // Exit and stop if it's not there
+  if (!message.content.startsWith(prefix)) return;
+ 
+  if (message.content.startsWith(prefix + "test")) {
+      message.channel.send({embed: {
+      color: 3447003,
+      description: "A very simple Embed!"
 });
 
 // THIS  MUST  BE  THIS  WAY
