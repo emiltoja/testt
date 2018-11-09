@@ -1,8 +1,10 @@
 var Discord = require('discord.js');
+const commando = require('discord.js-commando');
 const client = new Discord.Client(); 
 var prefix = ("/")
 
-
+client.registry.registerGroup('random', 'Random');
+client.registry.registerCommandsIn(__dirname " "/komendy)");
 
 client.on('ready', () => {
   console.log('I am ready!');
