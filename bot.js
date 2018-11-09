@@ -12,7 +12,7 @@ client.on('guildMemberAdd', member => {
   const channel = member.guild.channels.find(ch => ch.name === 'emiltoemiltobot');
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
-  channel.send(`witaj na emiltoserwerze, ${member}!`);
+  channel.send(`witaj na emiltoserwerze :heart: :heart: :heart:, ${member}!`);
 });
 
 
@@ -123,7 +123,12 @@ client.on('message', message => {
 });
 client.on('message', message => {
   if (message.content === 'szmusi') {
-    message.channel.send('szmusi? :heart:  :heart: :heart: ');
+    message.channel.send({embed: {
+    color: 3447003,
+    author: {
+      name: client.user.username,
+      icon_url: client.user.avatarURL
+	  
   }
 });
 
