@@ -185,6 +185,7 @@ client.on("message", (message) => {
   } else
   if (message.content.startsWith(prefix + "foo")) {
     message.channel.send("bar!");
+  }
 });
 
 // THIS  MUST  BE  THIS  WAY
