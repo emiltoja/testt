@@ -181,5 +181,20 @@ client.on('message', message => {
     }
 });
 
+client.user.setActivity('YouTube', { type: 'WATCHING' })
+  .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
+  .catch(console.error);
+});
+
+client.on('ready', () => {
+    bot.user.setStatus('available') // Can be 'available', 'idle', 'dnd', or 'invisible'
+    bot.user.setPresence({
+        game: {
+            name: 'Type !help',
+            type: 0
+        }
+    });
+});
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
