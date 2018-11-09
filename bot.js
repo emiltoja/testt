@@ -182,15 +182,14 @@ client.on("message", (message) => {
  
   if (message.content.startsWith(prefix + "ping")) {
 	message.channel.send({embed: {
-    color: 3447003,
+    color: FF0000,
     author: {
       name: client.user.username,
       icon_url: client.user.avatarURL
     },
     description: "WOOOPS!! \npodaj ilosc wiadomosci do usuniecia! \n ``` /purge <ilosc>```",
     fields: [{
-        name: "Fields",
-        value: "They can have different fields with small headlines."
+
       },
     ],
     timestamp: new Date(),
