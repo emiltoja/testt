@@ -231,6 +231,44 @@ client.on('message', message => {
 
 });
 
+client.on('ready', () => {
+    client.user.setStatus('available') // Can be 'available', 'idle', 'dnd', or 'invisible'
+    client.user.setPresence({
+        game: {
+            name: 'emiltogrze',
+            type: 0
+        }
+    });
+});
+
+client.on("message", (message) => {
+  // Exit and stop if it's not there
+  if (!message.content.startsWith(prefix)) return;
+ 
+  if (message.content.startsWith(prefix + "ping")) {
+	message.channel.send({embed: {
+    color: 3447003,
+    author: {
+      name: client.user.username,
+      icon_url: client.user.avatarURL
+    },
+    description: "WOOOPS!! \npodaj ilosc wiadomosci do usuniecia! \n ``` /purge <ilosc>```",
+    fields: [{
+        name: "Fields",
+        value: "They can have different fields with small headlines."
+      },
+    ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "© bot by emiltoja"
+    }
+  }
+});
+  }
+});
+
+
 	  
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
