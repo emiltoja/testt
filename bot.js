@@ -61,7 +61,6 @@ client.on('message', message => {
 });
 
 client.on('ready', () => {
-  console.log('I am ready!');
 });
 
 client.on('message', message => {
@@ -113,7 +112,7 @@ client.on('message', message => {
 });
 client.on('message', message => {
   if (message.content === 'karren') {
-    message.channel.send('karren to gupek nigdy nie zastapi miejsca szmusi!!!');
+    message.channel.send('karreN? chyba KaeN . . .  ');
   }
 });
 client.on('message', message => {
@@ -235,7 +234,7 @@ client.on('ready', () => {
     client.user.setStatus('available') // Can be 'available', 'idle', 'dnd', or 'invisible'
     client.user.setPresence({
         game: {
-            name: 'szmusi jest najlepsza na swiecie',
+            name: 'emiltogrze',
             type: 0
         }
     });
@@ -286,6 +285,34 @@ client.on("message", (message) => {
     fields: [{
         name: "szmusi",
         value: "najnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajlepsza dziewczyna jaka znam!!!!! :heart::heart::heart::heart::heart::heart::heart: \njesli myslisz ze jest inaczej, to zle myslisz gupku"
+      },
+    ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "© bot by emiltoja"
+    }
+  }
+});
+  }
+});
+client.on("message", (message) => {
+  // Exit and stop if it's not there
+  if (!message.content.startsWith(prefix)) return;
+ 
+  if (message.content.startsWith(prefix + "pomoc")) {
+	message.channel.send({embed: {
+    color: 696969,
+    author: {
+      name: client.user.username,
+      icon_url: client.user.avatarURL
+    },
+    title: "",
+    url: "",
+    description: "",
+    fields: [{
+        name: "pomoc",
+        value: "nikt cie nie slyszy, nie wzywaj pomocy tylko ladnie siedz tutaj na dupie"
       },
     ],
     timestamp: new Date(),
