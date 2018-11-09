@@ -1,5 +1,3 @@
-var Discord = require('discord.js');
-const { Client, Attachment } = require('discord.js');
 const { Client, RichEmbed } = require('discord.js');
 const client = new Discord.Client();
 const prefix = ("/")
