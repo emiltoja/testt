@@ -186,7 +186,7 @@ client.on('ready', () => {
     client.user.setStatus('available') // Can be 'available', 'idle', 'dnd', or 'invisible'
     client.user.setPresence({
         game: {
-            name: 'Type !help',
+            name: 'emiltogrze',
             type: 0
         }
     });
