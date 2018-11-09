@@ -180,10 +180,11 @@ client.on("message", (message) => {
   // Exit and stop if it's not there
   if (!message.content.startsWith(prefix)) return;
  
-  if (message.content.startsWith(prefix + "test")) {
-      message.channel.send({embed: {
-      color: 3447003,
-      description: "A very simple Embed!"
+  if (message.content.startsWith(prefix + "ping")) {
+    message.channel.send("pong!");
+  } else
+  if (message.content.startsWith(prefix + "foo")) {
+    message.channel.send("bar!");
 });
 
 // THIS  MUST  BE  THIS  WAY
