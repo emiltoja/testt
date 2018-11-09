@@ -5,11 +5,7 @@ var prefix = ("/")
 
 client.on('ready', () => {
   console.log('I am ready!');
-});
-
-client.on("ready", () => {
-  console.log('Im am ready!');
-  client.user.setActivity('YouTube', { type: 'WATCHING' 
+client.user.setPresence({ game: { name: 'yourGameGoesHere', type: 0 }
 });
 
 // Create an event listener for new guild members
