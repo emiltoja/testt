@@ -112,8 +112,8 @@ client.on('message', message => {
   }
 });
 client.on('message', message => {
-  if (message.content === 'kutas') {
-    message.channel.send('twuj stary pijany');
+  if (message.content === 'karren') {
+    message.channel.send('karren to gupek nigdy nie zastapi miejsca szmusi!!!');
   }
 });
 client.on('message', message => {
