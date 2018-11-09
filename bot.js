@@ -5,7 +5,6 @@ var prefix = ("/")
 
 client.on('ready', () => {
   console.log('I am ready!');
-client.user.setPresence({ game: { name: 'yourGameGoesHere', type: 0 }
 });
 
 // Create an event listener for new guild members
