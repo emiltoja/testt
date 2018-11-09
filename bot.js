@@ -275,7 +275,7 @@ client.on("message", (message) => {
  
   if (message.content.startsWith(prefix + "szmusi")) {
 	message.channel.send({embed: {
-    color: 990066,
+    color: 990099,
     author: {
       name: client.user.username,
       icon_url: client.user.avatarURL
