@@ -231,41 +231,40 @@ client.on('message', message => {
 
 });
 
-client.on('ready', () => {
-    client.user.setStatus('available') // Can be 'available', 'idle', 'dnd', or 'invisible'
-    client.user.setPresence({
-        game: {
-            name: 'emiltogrze',
-            type: 0
-        }
-    });
-});
-});
-client.on('message', message => {
-
-  if (message.content.startsWith(prefix + "ping")) {
-	message.channel.send({embed: {
-    color: 3447003,
-    color: FF0000,
-    author: {
-      name: client.user.username,
-      icon_url: client.user.avatarURL
+client.on("message", (message) => {
+  // Exit and stop if it's not there
+ if (!message.content.startsWith(prefix)) return;
+	if (!message.content.startsWith(prefix)) return;
+ 
+ if (message.content.startsWith(prefix + "ping")) {
+message.channel.send({embed: {
+  color: 3447003,
+  description: "A very simple Embed!"
     },
-    description: "WOOOPS!! \npodaj ilosc wiadomosci do usuniecia! \n ``` /purge <ilosc>```",
+    title: "This is an embed",
+    url: "http://google.com",
+    description: "This is a test embed to showcase what they look like and what they can do.",
     fields: [{
         name: "Fields",
         value: "They can have different fields with small headlines."
-       },
+      },
+      {
+        name: "Masked links",
+        value: "You can put [masked links](http://google.com) inside of rich embeds."
+      },
+      {
+        name: "Markdown",
+        value: "You can put all the *usual* **__Markdown__** inside of them."
+      }
     ],
     timestamp: new Date(),
     footer: {
       icon_url: client.user.avatarURL,
-      text: "© bot by emiltoja"
+      text: "© Example"
     }
   }
-});
-  }
-});
+});!"
+
 
 	  
 // THIS  MUST  BE  THIS  WAY
