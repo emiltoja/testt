@@ -3,11 +3,13 @@ const commando = require('discord.js-commando');
 const client = new Discord.Client();
 var prefix = ("/")
 
-client.user.setActivity('YouTube', { type: 'WATCHING' 
-});
-
 client.on('ready', () => {
   console.log('I am ready!');
+});
+
+client.on("ready", () => {
+  console.log('Im am ready!');
+  client.user.setActivity('YouTube', { type: 'WATCHING' 
 });
 
 // Create an event listener for new guild members
