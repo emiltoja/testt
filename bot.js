@@ -252,7 +252,9 @@ client.on("message", (message) => {
       name: client.user.username,
       icon_url: client.user.avatarURL
     },
-    description: "WOOOPS!! \npodaj ilosc wiadomosci do usuniecia! \n ``` /purge <ilosc>```",
+    title: "wooops!",
+    url: "http://google.com",
+    description: "podaj ilosc wiadomosci do usuniecia! \n ``` ' + prefix + 'purge <ilosc>```",
     fields: [{
         name: "Fields",
         value: "They can have different fields with small headlines."
@@ -268,7 +270,5 @@ client.on("message", (message) => {
   }
 });
 
-
-	  
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
