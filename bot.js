@@ -1,5 +1,6 @@
 var Discord = require('discord.js');
 const client = new Discord.Client();
+const RichEmbed = require('discord.js');
 const prefix = ("/")
 
 client.on('ready', () => {
