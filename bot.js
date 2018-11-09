@@ -240,14 +240,12 @@ client.on('ready', () => {
         }
     });
 });
-client.on("ready", () => {
-  console.log("I am ready!");
-});
- 
 client.on("message", (message) => {
-  if (message.content.startsWith("test")) {
+  // Exit and stop if the prefix is not there or if user is a bot
+  if (!message.content.startsWith(prefix) || message.author.bot) return;
+ 
+  if (message.content.startsWith(prefix + "ping")) {
 message.channel.send({embed: {
-} else
     color: 3447003,
     author: {
       name: client.user.username,
