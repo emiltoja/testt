@@ -247,6 +247,7 @@ client.on("ready", () => {
 client.on("message", (message) => {
   if (message.content.startsWith("test")) {
 message.channel.send({embed: {
+} else
     color: 3447003,
     author: {
       name: client.user.username,
