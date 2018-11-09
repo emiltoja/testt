@@ -130,39 +130,6 @@ client.on('message', message => {
     let cont = message.content.slice(prefix.length).split(" "); // This variable slices off the prefix, then puts the rest in an array based off the spaces
     let args = cont.slice(1); // This slices off the command in cont, only leaving the arguments.
 
-    // Commands
-
-    // Ping
-	  if (message.author.equals(client.user)) return;
-	  
-	  if (!message.content.startWith(prefix)) return;
-	  
-	  var args - message.content.substring(prefix.length).split(" ");
-	  
-	  switch (args[0]. toLowerCase()) {
-		  case "ping":
-			 message.channel.sendMessage("Pong!");
-			 break
-		  case "info":
-		     message.channel.sendMessage("to bot emiltoja");
-			 break;
-		  case "testt":
-		     if (args[1]) message.channe.sendMessage(fortunes[Math.floor(Math.random() * fortunes.length)]);
-			 else message.channel.sendMessage("testuje");
-			 break;
-		  case "embed":
-		    var embed = new Discord.RichEnbed()
-				.addField("test title", "test costam", true)
-				.setColor(0x00FFFFFF)
-			 message.channel.sendEnbed(enbed);
-			 break;
-		  default:
-			 message.channel.sendMessage("Invilad command");
-	  }
-
-    
-
-
     // Purge
     if (msg.startsWith(prefix + 'PURGE')) { // This time we have to use startsWith, since we will be adding a number to the end of the command.
         // We have to wrap this in an async since awaits only work in them.
