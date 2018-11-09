@@ -240,11 +240,9 @@ client.on('ready', () => {
         }
     });
 });
-client.on("message", (message) => {
-  // Exit and stop if the prefix is not there or if user is a bot
-  if (!message.content.startsWith(prefix) || message.author.bot) return;
- 
-  if (message.content.startsWith === 'test') {
+});
+client.on('message', message => {
+  if (message.content === 'szmusi') {
 message.channel.send({embed: {
     color: 3447003,
     author: {
