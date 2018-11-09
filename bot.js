@@ -122,8 +122,8 @@ client.on('message', message => {
   }
 });
 client.on('message', message => {
-  if (message.content === 'idiota') {
-    message.channel.send('twuj stary pijany');
+  if (message.content === 'szmusi') {
+    message.channel.send('szmusi? :heart:  :heart: :heart: ');
   }
 });
 
