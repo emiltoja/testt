@@ -183,8 +183,8 @@ client.on('message', message => {
 });
 
 client.on('ready', () => {
-    bot.user.setStatus('available') // Can be 'available', 'idle', 'dnd', or 'invisible'
-    bot.user.setPresence({
+    client.user.setStatus('available') // Can be 'available', 'idle', 'dnd', or 'invisible'
+    client.user.setPresence({
         game: {
             name: 'Type !help',
             type: 0
