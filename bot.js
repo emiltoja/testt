@@ -187,6 +187,10 @@ client.on("message", (message) => {
       name: client.user.username,
       icon_url: client.user.avatarURL
     },
+    title: "wooops!",
+    url: "http://google.com",
+    description: "podaj ilosc wiadomosci do usuniecia! \n ``` ' + prefix + 'purge <ilosc>```",
+    fields: [{
         name: "Fields",
         value: "They can have different fields with small headlines."
       },
@@ -194,7 +198,7 @@ client.on("message", (message) => {
     timestamp: new Date(),
     footer: {
       icon_url: client.user.avatarURL,
-      text: "© Example"
+      text: "© bot by emiltoja"
     }
   }
 });
