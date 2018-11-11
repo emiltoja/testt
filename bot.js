@@ -94,7 +94,19 @@ client.on('ready', () => {
 
 client.on('message', message => {
   if (message.content === 'awatar') {
-    message.reply(messagementions.CHANNELS_PATTERN.avatarURL);
+    message.reply(message.author.avatarURL);
+  }
+});
+
+client.on('message', message => {
+  if (message.content === 'Awatar') {
+    message.reply(message.author.avatarURL);
+  }
+	
+});
+client.on('message', message => {
+  if (message.content === 'avatar') {
+    message.reply(message.author.avatarURL);
   }
 });
 client.on('ready', () => {
