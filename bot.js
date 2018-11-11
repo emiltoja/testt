@@ -94,9 +94,8 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === '/awatar') {
-    const user = message.mentions.users.first();
       let embed = new Discord.RichEmbed()
-    .setImage(message.mentions.users.avatarURL)
+    .setImage(message.author.avatarURL)
     .setColor('#275BF0')
       message.channel.send(embed)
     }
@@ -184,9 +183,14 @@ client.on('message', message => {
 });
 client.on('message', message => {
   if (message.content === 'slodziak') {
-    message.channel.send('najwiekszy slodziak(oprocz karren) - https://i.imgur.com/9iXDVu4.mp4');
+      let embed = new Discord.RichEmbed()
+    .setImage()
+    .setColor('#275BF0')
+      message.channel.send("najwiekszy slodziak(oprocz karren)", {files: ["https://i.imgur.com/9iXDVu4.mp4"]});
+});
   }
 });
+
 client.on('message', message => {
   if (message.content === 'szmusitoja') {
     message.channel.send(':heart: szmusi :heart:');
