@@ -99,13 +99,14 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-  if (message.content === '/avatar') {
-    var member= message.mentions.members.first();
-    let embed = new Discord.RichEmbed()
-  .setImage(message.member.avatarURL)
-  .setColor('#275BF0')
-    message.channel.send(embed)
-  }
+    if (message.content === '/avatar') {
+      // Remove the "var" line; it isn't necessary.
+      let embed = new Discord.RichEmbed()
+      // Replace "message.member" with "message.author"
+    .setImage(message.author.avatarURL)
+    .setColor('#275BF0')
+      message.channel.send(embed)
+    }
 });
 
 client.on('message', message => {
