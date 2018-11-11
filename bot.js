@@ -187,7 +187,7 @@ client.on('message', message => {
       let embed = new Discord.RichEmbed()
     .setImage()
     .setColor('#275BF0')
-      message.channel.send('https://i.imgur.com/9iXDVu4.mp4']
+      message.channel.send('https://i.imgur.com/9iXDVu4.mp4');
     }
 });
 
