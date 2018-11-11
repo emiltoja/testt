@@ -181,14 +181,6 @@ client.on('message', message => {
     message.channel.send('```c h e j   m i s i u```');
   }
 });
-client.on('message', message => {
-  if (message.content === 'slodziak') {
-      let embed = new Discord.RichEmbed()
-    .setImage()
-    .setColor('#275BF0')
-  message.channel.send("najwiekszy slodziak(oprocz karren)", {files: ["https://i.imgur.com/9iXDVu4.mp4"
-  }
-});
 								      
 client.on('message', message => {
   if (message.content === 'slodziak') {
