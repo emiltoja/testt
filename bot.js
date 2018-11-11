@@ -117,8 +117,8 @@ client.on('message', message => {
   }
 });
 client.on('message', message => {
-if(message.content == "/test")
-     message.member.setDeaf(true);
+  if(message.content == "/test")
+    message.member.setDeaf(true, "reason");
 	
 });
 client.on('message', message => {
