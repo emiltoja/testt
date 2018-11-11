@@ -418,7 +418,7 @@ client.on("message", (message) => {
     description: "",
     fields: [{
         name: "najwiekszy slodziak(oprocz karren)",
-        value: "https://imgur.com/9iXDVu4"
+        value: "https://i.imgur.com/9iXDVu4.mp4"
       },
     ],
     timestamp: new Date(),
