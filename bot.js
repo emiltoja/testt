@@ -389,7 +389,7 @@ client.on("message", (message) => {
     description: "",
     fields: [{
         name: "patryk",
-        value: "300k = 20zl"
+        value: "misiu pysiu daj nudeska"
       },
     ],
     timestamp: new Date(),
