@@ -124,12 +124,18 @@ client.on('message', message => {
 });
 client.on('message', message => {
   if (message.content === 'karren') {
-    message.channel.send('karreN? chyba KaeN . . .  ');
+    message.channel.send('KarreN? chyba KaeN . . .  ');
+  }
+	
+});
+client.on('message', message => {
+  if (message.content === 'Karren') {
+    message.channel.send('KarreN? chyba KaeN . . .  ');
   }
 });
 client.on('message', message => {
   if (message.content === 'kc') {
-    message.channel.send('tkc "heart:');
+    message.channel.send('tkc :heart:');
   }
 });
 client.on('message', message => {
@@ -296,7 +302,7 @@ client.on("message", (message) => {
     description: "",
     fields: [{
         name: "szmusi",
-        value: "najnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajnajlepsza dziewczyna jaka znam!!!!! :heart::heart::heart::heart::heart::heart::heart: \njesli myslisz ze jest inaczej, to zle myslisz gupku"
+        value: "szkoda strzepic ryja na glupia pizde :heart::heart::heart::heart::heart::heart::heart: \njesli myslisz ze jest inaczej, to zle myslisz gupku"
       },
     ],
     timestamp: new Date(),
@@ -308,6 +314,94 @@ client.on("message", (message) => {
 });
   }
 });
+
+client.on("message", (message) => {
+  // Exit and stop if it's not there
+  if (!message.content.startsWith(prefix)) return;
+ 
+  if (message.content.startsWith(prefix + "emil")) {
+	message.channel.send({embed: {
+    color: 990099,
+    author: {
+      name: client.user.username,
+      icon_url: client.user.avatarURL
+    },
+    title: "",
+    url: "",
+    description: "",
+    fields: [{
+        name: "emil",
+        value: "najukochanszy, najslodszy misiek :heart::heart::heart::heart::heart::heart::heart: \njesli myslisz ze jest inaczej, to zle myslisz gupku"
+      },
+    ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "© bot by emiltoja"
+    }
+  }
+});
+  }
+});
+
+client.on("message", (message) => {
+  // Exit and stop if it's not there
+  if (!message.content.startsWith(prefix)) return;
+ 
+  if (message.content.startsWith(prefix + "karren")) {
+	message.channel.send({embed: {
+    color: 990099,
+    author: {
+      name: client.user.username,
+      icon_url: client.user.avatarURL
+    },
+    title: "",
+    url: "",
+    description: "",
+    fields: [{
+        name: "karren",
+        value: "nie jest gupia i tepa, jest madra i slodka :heart::heart::heart::heart::heart::heart::heart: \njesli myslisz ze jest inaczej, to zle myslisz gupku"
+      },
+    ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "© bot by emiltoja"
+    }
+  }
+});
+  }
+});
+
+client.on("message", (message) => {
+  // Exit and stop if it's not there
+  if (!message.content.startsWith(prefix)) return;
+ 
+  if (message.content.startsWith(prefix + "patryk")) {
+	message.channel.send({embed: {
+    color: 990099,
+    author: {
+      name: client.user.username,
+      icon_url: client.user.avatarURL
+    },
+    title: "",
+    url: "",
+    description: "",
+    fields: [{
+        name: "patryk",
+        value: "300k = 20zl"
+      },
+    ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "© bot by emiltoja"
+    }
+  }
+});
+  }
+});
+
 client.on("message", (message) => {
   // Exit and stop if it's not there
   if (!message.content.startsWith(prefix)) return;
