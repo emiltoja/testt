@@ -190,7 +190,7 @@ client.on('message', message => {
 });
 client.on('message', message => {
   if (message.content === 'slodziak') {
-    message.channel.send('https://i.imgur.com/9iXDVu4.mp4');
+    message.channel.send('najwiekszy slodziak(oprocz karren) - https://i.imgur.com/9iXDVu4.mp4');
   }
 });
 client.on('message', message => {
