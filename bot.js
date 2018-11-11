@@ -94,8 +94,9 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === '/awatar') {
+    const user = message.mentions.users.first();
       let embed = new Discord.RichEmbed()
-    .setImage(message.author.avatarURL)
+    .setImage(message.mentions.users.avatarURL)
     .setColor('#275BF0')
       message.channel.send(embed)
     }
