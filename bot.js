@@ -115,6 +115,10 @@ client.on('message', message => {
   if (message.content === 'karren') {
     message.channel.send('KarreN? chyba KaeN . . .  ');
   }
+});
+client.on('message', message => {
+if(message.content == "/test")
+     message.member.setDeaf(true);
 	
 });
 client.on('message', message => {
