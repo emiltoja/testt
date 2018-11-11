@@ -185,7 +185,7 @@ client.on('message', message => {
 client.on('message', message => {
     if (message.content === 'slodziak') {
       let embed = new Discord.RichEmbed()
-    .setImage('https://i.imgur.com/9iXDVu4.mp4')
+    .setURL('https://i.imgur.com/9iXDVu4.mp4')
     .setColor('#275BF0')
       message.channel.send();
     }
