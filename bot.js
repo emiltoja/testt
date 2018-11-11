@@ -189,8 +189,8 @@ client.on('message', message => {
   }
 });
 client.on('message', message => {
-  if (message.content === 'marcin') {
-    message.channel.send('huj jebany!');
+  if (message.content === 'slodziak') {
+    message.channel.send('https://i.imgur.com/9iXDVu4.mp4');
   }
 });
 client.on('message', message => {
@@ -406,7 +406,7 @@ client.on("message", (message) => {
   // Exit and stop if it's not there
   if (!message.content.startsWith(prefix)) return;
  
-  if (message.content.startsWith(prefix + "slodziak")) {
+  if (message.content.startsWith(prefix + "")) {
 	message.channel.send({embed: {
     color: 990099,
     author: {
@@ -418,7 +418,7 @@ client.on("message", (message) => {
     description: "",
     fields: [{
         name: "najwiekszy slodziak(oprocz karren)",
-        value: "https://i.imgur.com/9iXDVu4.mp4"
+        value: ""
       },
     ],
     timestamp: new Date(),
