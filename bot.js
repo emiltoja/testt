@@ -113,8 +113,8 @@ client.on('ready', () => {
   console.log('I am ready!');
 });
 client.on('message', message => {
-  if (message.content === 'huj') {
-    message.channel.send('twuj stary pijany');
+  if (message.content === 'czeesc') {
+    message.channel.send("no hej, " + message.author + " jak leci?");
   }
 });
 client.on('message', message => {
