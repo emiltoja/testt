@@ -23,7 +23,7 @@ client.on("message", msg => {
 	}
  else 
         if (msg.content.startsWith('/kto')) {
-        msg.channel.sendMessage("immune is the author!")			
+        msg.channel.sendMessage("twoj stary")			
         }
 	else
 		
@@ -93,36 +93,14 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-  if (message.content === 'awatar ') {
-    message.reply(message.author.avatarURL);
-  }
-});
-
-client.on('message', message => {
-    if (message.content === '/avatar') {
-var user = message.mentions.users.first();
+    if (message.content === '/awatar') {
       let embed = new Discord.RichEmbed()
-      // Replace "message.member" with "message.author"
-    .setImage(user.avatarURL)
+    .setImage(message.author.avatarURL)
     .setColor('#275BF0')
       message.channel.send(embed)
     }
 });
 
-client.on('message', message => {
-  if (message.content === 'Awatar') {
-    message.reply(message.author.avatarURL);
-  }
-	
-});
-client.on('message', message => {
-  if (message.content === 'avatar') {
-    message.reply(message.author.avatarURL);
-  }
-});
-client.on('ready', () => {
-  console.log('I am ready!');
-});
 client.on('message', message => {
   if (message.content === 'czeesc <@510094801052631040>') {
     message.channel.send("no hej, " + message.author + " jak leci?");
