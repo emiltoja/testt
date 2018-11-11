@@ -185,8 +185,6 @@ client.on('message', message => {
 client.on('message', message => {
   if (message.content === 'slodziak') {
       message.channel.send("najwiekszy slodziak(oprocz karren)", {files: ["https://i.imgur.com/9iXDVu4.mp4"]
-      let embed = new Discord.RichEmbed()
-    .setColor('#275BF0')
 });
   }
 });
