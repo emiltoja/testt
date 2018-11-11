@@ -100,10 +100,10 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '/avatar') {
-      // Remove the "var" line; it isn't necessary.
+var user = message.mentions.users.first();
       let embed = new Discord.RichEmbed()
       // Replace "message.member" with "message.author"
-    .setImage(message.author.avatarURL)
+    .setImage(user.avatarURL)
     .setColor('#275BF0')
       message.channel.send(embed)
     }
