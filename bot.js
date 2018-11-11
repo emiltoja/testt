@@ -252,7 +252,7 @@ client.on('ready', () => {
     client.user.setStatus('available') // Can be 'available', 'idle', 'dnd', or 'invisible'
     client.user.setPresence({
         game: {
-            name: 'emiltogrze',
+            name: 'emiltoban',
             type: 0
         }
     });
@@ -401,6 +401,36 @@ client.on("message", (message) => {
 });
   }
 });
+
+client.on("message", (message) => {
+  // Exit and stop if it's not there
+  if (!message.content.startsWith(prefix)) return;
+ 
+  if (message.content.startsWith(prefix + "slodziak")) {
+	message.channel.send({embed: {
+    color: 990099,
+    author: {
+      name: client.user.username,
+      icon_url: client.user.avatarURL
+    },
+    title: "",
+    url: "",
+    description: "",
+    fields: [{
+        name: "najwiekszy slodziak(oprocz karren)",
+        value: "https://imgur.com/9iXDVu4"
+      },
+    ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "© bot by emiltoja"
+    }
+  }
+});
+  }
+});
+
 
 client.on("message", (message) => {
   // Exit and stop if it's not there
