@@ -113,7 +113,7 @@ client.on('ready', () => {
   console.log('I am ready!');
 });
 client.on('message', message => {
-  if (message.content === 'czeesc') {
+  if (message.content === 'czeesc <@510094801052631040>') {
     message.channel.send("no hej, " + message.author + " jak leci?");
   }
 });
