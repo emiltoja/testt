@@ -16,16 +16,6 @@ client.on('guildMemberAdd', member => {
 });
 
 
-//messages 
-client.on("message", msg => {
-        if (msg.content.startsWith('/kto')) {
-        msg.channel.sendMessage("twoj stary")			
-        }
-}
-else 
-  if(msg.content.startsWith("")) {
-}
-});
 
 client.on('message', message => {
   if (!message.guild) return;
