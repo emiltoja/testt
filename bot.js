@@ -18,18 +18,9 @@ client.on('guildMemberAdd', member => {
 
 //messages 
 client.on("message", msg => {
-        if (msg.content.startsWith('/emil')) {
-		msg.channel.sendMessage("to ziom")
-	}
- else 
         if (msg.content.startsWith('/kto')) {
         msg.channel.sendMessage("twoj stary")			
         }
-	else
-		
-            if (msg.content.startsWith('/pomoc')) {    
-		if(msg.author.bot) return;
-		msg.channel.sendMessage("no kurla potem uzupelnie gupku")
 }
 else 
   if(msg.content.startsWith("")) {
@@ -446,7 +437,7 @@ client.on("message", (message) => {
     description: "",
     fields: [{
         name: "pomoc",
-        value: "nikt cie nie slyszy, nie wzywaj pomocy tylko ladnie siedz tutaj na dupie"
+        value: "/patryk, /karren, /emil, /szmusi, /purge, /kick, /ban"
       },
     ],
     timestamp: new Date(),
