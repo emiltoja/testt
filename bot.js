@@ -177,6 +177,12 @@ client.on('message', message => {
     message.channel.send('https://cdn.discordapp.com/attachments/517116695916314625/527494798270005248/1539561679524.jpg');
   }
 });
+
+client.on('message', message => {
+  if (message.content === 'bbszmusi') {
+    message.channel.send('https://cdn.discordapp.com/attachments/517116695916314625/527494798270005248/1539561679524.jpg');
+  }
+});
 client.on('message', message => {
   if (message.content === 'emiltoja') {
     message.channel.send(':heart: emilek :heart:');
