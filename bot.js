@@ -88,6 +88,21 @@ client.on('message', message => {
   }
 });
 client.on('message', message => {
+  if (message.content === 'dobranoc <@510094801052631040>') {
+    message.channel.send("dobranoc " + message.author + " miłych snów!!");
+  }
+});
+client.on('message', message => {
+  if (message.content === 'dziendobry <@510094801052631040>') {
+    message.channel.send("dzień dobry " + message.author + " udanego dnia!!");
+  }
+});
+client.on('message', message => {
+  if (message.content === 'daj nudeska <@510094801052631040>') {
+    message.channel.send("zboczuchu ty, wczoraj ci wyslalam :suck:");
+  }
+});
+client.on('message', message => {
   if (message.content === 'cwel') {
     message.channel.send('twuj stary pijany');
   }
@@ -432,7 +447,7 @@ client.on("message", (message) => {
     url: "",
     description: "",
     fields: [{
-        name: "pomoc",
+        name: "dostepne komendy",
         value: "/patryk, /karren, /emil, /szmusi, /purge, /kick, /ban"
       },
     ],
