@@ -15,7 +15,18 @@ client.on('guildMemberAdd', member => {
   channel.send(`witaj na emiltoserwerze :heart: :heart: :heart:, ${member}!`);
 });
 
+client.on('ready', () => {
+    // List servers the bot is connected to
+    console.log("Servers:")
+    client.guilds.forEach((guild) => {
+        console.log(" - " + guild.name)
 
+        // List all channels
+        guild.channels.forEach((channel) => {
+            console.log(` -- ${channel.name} (${channel.type}) - ${channel.id}`)
+        })
+    })
+})
 
 client.on('message', message => {
   if (!message.guild) return;
@@ -185,18 +196,6 @@ client.on('message', message => {
     .setColor('#275BF0')
       message.channel.send();
     }
-});
-
-client.on('message', message => {
-  if (message.content === 'szmusitoja') {
-    message.channel.send('https://cdn.discordapp.com/attachments/517116695916314625/527494798270005248/1539561679524.jpg');
-  }
-});
-
-client.on('message', message => {
-  if (message.content === 'bbszmusi') {
-    message.channel.send('https://cdn.discordapp.com/attachments/517116695916314625/527494798270005248/1539561679524.jpg');
-  }
 });
 client.on('message', message => {
   if (message.content === 'emiltoja') {
