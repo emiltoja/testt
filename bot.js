@@ -251,7 +251,7 @@ client.on('ready', () => {
     client.user.setStatus('available') // Can be 'available', 'idle', 'dnd', or 'invisible'
     client.user.setPresence({
         game: {
-            name: 'emiltoban',
+            name: 'emiltounban',
             type: 0
         }
     });
@@ -301,7 +301,7 @@ client.on("message", (message) => {
     description: "",
     fields: [{
         name: "szmusi",
-        value: "szkoda strzepic ryja na glupia pizde :heart::heart::heart::heart::heart::heart::heart: \njesli myslisz ze jest inaczej, to zle myslisz gupku"
+        value: "jej ogolona sowa jest sliczna :heart::heart::heart::heart::heart::heart::heart: \njesli myslisz ze jest inaczej, to zle myslisz gupku"
       },
     ],
     timestamp: new Date(),
