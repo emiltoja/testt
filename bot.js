@@ -301,7 +301,7 @@ client.on("message", (message) => {
     description: "",
     fields: [{
         name: "szmusi",
-        value: "jej ogolona sowa jest sliczna :heart::heart::heart::heart::heart::heart::heart: \njesli myslisz ze jest inaczej, to zle myslisz gupku"
+        value: "pizzzzzzzzzzzda \njesli myslisz ze jest inaczej, to zle myslisz gupku"
       },
     ],
     timestamp: new Date(),
