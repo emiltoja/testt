@@ -301,7 +301,7 @@ client.on("message", (message) => {
     description: "",
     fields: [{
         name: "szmusi",
-        value: "jej ogolona sowa jest sliczna :heart::heart::heart::heart::heart::heart::heart: \njesli myslisz ze jest inaczej, to zle myslisz gupku"
+        value: "to najwieksza glupia pizda \njesli myslisz ze jest inaczej, to zle myslisz gupku"
       },
     ],
     timestamp: new Date(),
@@ -376,7 +376,7 @@ client.on("message", (message) => {
   // Exit and stop if it's not there
   if (!message.content.startsWith(prefix)) return;
  
-  if (message.content.startsWith(prefix + "patryk")) {
+  if (message.content.startsWith(prefix + "helios")) {
 	message.channel.send({embed: {
     color: 990099,
     author: {
@@ -387,8 +387,8 @@ client.on("message", (message) => {
     url: "",
     description: "",
     fields: [{
-        name: "patryk",
-        value: "misiu pysiu daj nudeska"
+        name: "helios",
+        value: "SEX"
       },
     ],
     timestamp: new Date(),
