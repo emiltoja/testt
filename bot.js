@@ -1,5 +1,6 @@
 var Discord = require('discord.js');
 const client = new Discord.Client()
+const api = ("https://emiltoja.pl/lsrp/api.php")
 const prefix = ("/")
 
 client.on('ready', () => {
