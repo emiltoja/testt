@@ -7,7 +7,7 @@ const prefix = ("/")
 
 module.exports.run = async (bot, message, args) => {
 	sneakfetch.get(api).then(r => {
-		if (message.content === '/awatar') {
+		if (message.content === '/lista') {
 		  let nickname = r.nickname;
 		  message.channel.send(nickname)
 	});
