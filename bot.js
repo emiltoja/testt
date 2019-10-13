@@ -1,18 +1,8 @@
 var Discord = require('discord.js');
 const client = new Discord.Client()
 const api = ("https://emiltoja.pl/lsrp/api.php")
-const snekfetch = require("snekfetch");
 const Discord = require("discord.js");
 const prefix = ("/")
-
-module.exports.run = async (bot, message, args) => {
-	sneakfetch.get(api).then(r => {
-		if (message.content === '/lista') {
-		  let nickname = r.nickname;
-		  message.channel.send(nickname)
-	});
-
-}
 
 client.on('ready', () => {
   console.log('I am ready!');
