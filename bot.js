@@ -11,7 +11,7 @@ client.once('ready', () => {
 client.on('message', message => {
   if (command === 'pracownicy') {
   const { nickname } = await fetch('http://mathelusz.ct8.pl/lsrp/api.php').then(response => response.json());
-    message.channel.send(file);
+    message.channel.send(nickname);
   }
 });
 });
