@@ -29,7 +29,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-  if (message.content === 'kim jest golomp? <@510094801052631040>') {
+  if (message.content === 'kim jest golomp?') {
     message.channel.send("gatunek średniej wielkości ptaka z rodziny gołębiowatych. Pierwotnie zasiedlał południową Europę, północną Afrykę oraz zachodnią i centralną Azję. Obecnie spotykany na każdym kontynencie z wyjątkiem Antarktydy.");
   }
 });
