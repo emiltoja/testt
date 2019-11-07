@@ -16,6 +16,32 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
+  if (message.content === 'gowno') {
+    message.channel.send("smacznego");
+  }
+});
+
+client.on('message', message => {
+  if (message.content === 'dobrze') {
+    message.channel.send("to super!");
+  }
+});
+client.on('message', message => {
+  if (message.content === 'no') {
+    message.channel.send("noo");
+  }
+});
+client.on('message', message => {
+  if (message.content === 'XD') {
+    message.channel.send("XDDDDD");
+  }
+});
+client.on('message', message => {
+  if (message.content === 'spierdalaj') {
+    message.channel.send("bo");
+  }
+});
+client.on('message', message => {
   if (message.content === 'czeesc <@510094801052631040>') {
     message.channel.send("no hej, " + message.author + " jak leci?");
   }
