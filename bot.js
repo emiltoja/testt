@@ -16,7 +16,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-  if (message.content === 'gowno') {
+  if (message.content === 'gowssssno') {
     message.channel.send("smacznego");
   }
 });
